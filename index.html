@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-green.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel='manifest' href='manifest.json'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"><meta>
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <link rel="manifest" href="./manifest.json">
+    <meta charset="utf-8">
+    
+    
+ <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    
+    
+
+</head>
+
+
+<body>
+   <!--Simple header with fixed tabs. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+                    mdl-layout--fixed-tabs">
+    <header class="mdl-layout__header">
+       <!--Tabs -->
+      <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+        <a href="#fixed-tab-1" class="mdl-layout__tab is-active ">Map</a>  
+        <a href="#fixed-tab-2" class="mdl-layout__tab">Info</a>
+        <a href="#fixed-tab-3" class="mdl-layout__tab">Ways to Help</a>
+        <a href="#fixed-tab-4" class="mdl-layout__tab">About Me</a>
+        <a href="#fixed-tab-5" class="mdl-layout__tab is-active ">Learn Pronunciation</a>
+      </div>
+    </header>
+
+
+    <main class="mdl-layout__content">
+
+
+      <!-- SECTION 1 : Google Map API where selection of a region brings up historical temperature change data need search engine to find city and date-->
+<section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <div>
+          <input list="cities" name="cities" id="searchBox">
+          <datalist id="cities">
+          </datalist>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="searchButton">
+            Search
+          </button>
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+</section>
+        
+      <!-- SECTION 2: More changing weather facts --------------------------------------->
+     
+      <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+        <div class="page-content demo-layout-transparent mdl-layout">
+          <!-- CONTENT HERE -->
+          <div id="leftmargin">
+                <p id="text">  Merriam Webster</p>
+                  <p id="text">About Us<p>
+                  <p id="colorchange"> For more than 150 years, in print and now online, Merriam-Webster has been America's leading and most-trusted provider of language information.
+                                       Each month, our Web sites offer guidance to more than 40 million visitors. In print, our publications include Merriam-Webster's Collegiate Dictionary
+                                       (among the best-selling books in American history) and newly published dictionaries for English-language learners. All Merriam-Webster products and 
+                      services are backed by the largest team of professional dictionary editors and writers in America, and one of the largest in the world.
+                        Thanks for joining us.</p>
+              
+              <div class="mdl-card__media">
+                <img src="game.png" width="100%" />
+              </div>
+              
+              
+                  <p id="text">Words of the Day</p>
+                  <p id="colorchange"> unique words on daily bases to learn.</p>
+              
+              <div class="mdl-card__media">
+                <img src="word.png" width="100%" />
+              </div>
+              
+              <p id="text">Thesaurus search</p>
+                  <p id="colorchange"> Search more than 275,000 synonyms, antonyms, related words, and idiomatic phrases. Find concise definitions
+                      pinpointing the meaning shared by synonyms, and sample sentences showing how words are used in context. The thesaurus is more 
+                      than just a list of synonyms; it is your guide to more precise and effective use of language. </p>
+              
+              <div class="mdl-card__media">
+                <img src="browse.png" width="100%" />
+              </div>
+              
+              
+                  <p id="text">Contact Us</p>
+                  <p id="colorchange"> Thank you for your interest in Merriam-Webster.
+We find that many questions can be answered at our Help Pages, so you may find your answer more quickly if you browse those options first.
+Otherwise, use the form below to send your comment or questions, and don’t forget to select the topic you are contacting us about!
+Merriam-Webster Inc.
+47 Federal Street
+Springfield, MA 01105
+Phone: (413) 734-3134</p>
+           
+                  
+      <p id="colorchange">A BIG THANK Merriam Webster for creating a wonderful App to help in learning new vocabulary with intersting activities. <a href="https://www.merriam-webster.com"> HERE.</a></p>
+                     
+           </div> 
+        </div>
+      </section>
+            
+            
+          
+        
+      <!-- SECTION 3: CREATION OF YOUR OWN LIST SPECIFIC TO YOUR LIFESTYLE to reduce YOUR carbon footprint and Info   -->
+      <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+        <div class="page-content mdl-grid">
+
+          <!-- This card is for making personal list for changing your own lifestyle-->
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="mdl-card" id="helpful_tips">
+              <div class="mdl-card__title">Make Your Own List to learn English vocabulary </div>
+              <div class="mdl-card__media">
+                <img height="652px" src="vocab.png" width="100%" />
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p style="font-size: 18px">Here you can create your own checklist.</p>
+                <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable" width=100%>
+                  <thead>
+                    <tr>
+                      <th class="mdl-data-table__cell--non-numeric" style="font-size:18px">To Do</th>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="mdl-data-table__cell--non-numeric">
+                        <!-- Add user input text box here -->
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="sample1">
+                        </div>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="mdl-data-table__cell--non-numeric">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="sample2">
+                        </div>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="mdl-data-table__cell--non-numeric">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="sample3">
+                        </div>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="mdl-data-table__cell--non-numeric">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="sample4">
+                        </div>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="mdl-data-table__cell--non-numeric">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="sample5">
+                        </div>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="mdl-data-table__cell--non-numeric">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="sample6">
+                        </div>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p id="button">
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="myToDoList">
+                              SAVE To Do LIST 
+                            </button>
+                </p>
+              </div>
+            </div>
+          </div>
+
+      
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="mdl-card" id="helpful_tips">
+              <div class="mdl-card__title">Here are Some Ways to do fun activities</div>
+              <div class="mdl-card__media">
+                <img src="game_activity.png" width="100%" height="652px" />
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p style="font-size: 18px">Merbium Webster dictionary makes life easier.</p>
+               
+                <ul class="demo-list-three mdl-list">
+                  <!--Helpful TIP #1-->
+                  <li>
+                    <span class="mdl-list__item-primary-content">
+                                      <i class="material-icons">star</i>
+                                      <span id="list_title">Game</span>
+                    <span class="mdl-list__item-text-body">
+                                        <p>There are some weekly challenges where people can use their vocabulary and learn more words. Like Semantic Drift Quiz, in this game These words may not be on the tip of anyone's tongue, but once upon a time all of these were synonyms for common words.
+                                            If you want to sound as though you had spent the morning eating a very old thesaurus instead of breakfast then this quiz is for you. It will give you superpowers: the knowledge you gain will annoy your friends and annoy your enemies even more.</p>
+                                      </span>
+                    </span>
+                  </li>
+                  <!--Helpful Tip #2-->
+                  <li>
+                    <span class="mdl-list__item-primary-content">
+                                      <i class="material-icons">star</i>
+                                      <span id="list_title">Word of the Day</span>
+                    <span class="mdl-list__item-text-body">
+                                        <p>Every day there will be a new word with its usage in sentences with synonymous and antonymous.</p>
+                                      </span>
+                    </span>
+                  </li>
+
+                  <!--Helpful Tip #3-->
+                  <li>
+                    <span class="mdl-list__item-primary-content">
+                                      <i class="material-icons">star</i>
+                                      <span id="list_title">Words At Play</span>
+                    <span class="mdl-list__item-text-body">
+                                        <p>learn while playing. There are so many other game for adult and kids game for fun as well as for learning purpose.</p>
+                                      </span>
+                    </span>
+                  </li>
+                  <!--Helpful Tip #4-->
+                  <li>
+                    <span class="mdl-list__item-primary-content">
+                                      <i class="material-icons">star</i>
+                                      <span id="list_title">Browse Thesaurus</span>
+                    <span class="mdl-list__item-text-body">
+                                        <p>search for synonyms and antonyum.</p>
+                                      </span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!--       -------------------------        About Me Section          ------------------------------         -->
+
+      <section class="mdl-layout__tab-panel" id="fixed-tab-4">
+        <div class="page-content mdl-grid">
+
+          <!-- Github Page Card -->
+          <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-card">
+              <div class="mdl-card__title">Github Page</div>
+              <div class="mdl-card__media">
+                <img src="dictionary_logo.jpg" width="100%" />
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>If you would like to follow me on Github. Click <a href="https://github.com/khanNawal/it202"> here</a> for my Github for IT_202 projects.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Me Card-->
+          <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-card">
+              <div class="mdl-card__title">About Me</div>
+              <div class="mdl-card__media">
+                <img src="me.png" width="100%" />
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>My name is Nawal Khan. I am student at UIC studying Computer Science. Expected date of graduation is 2020. </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Info Card-->
+          <div class="mdl-cell mdl-cell--4-col mdl-card">
+            <div class="mdl-card">
+              <div class="mdl-card__title">Contact </div>
+              <div class="mdl-card__media">
+                <img src="enve.jpg" width="100%" />
+              </div>
+              <div class="mdl-card__supporting-text">
+                   <p>Please feel free to email with questions at  <a href="mailto:nkhan66@uic.edu">nkhan66@uic.edu. </a> 
+                  </p>
+                
+                            </div>
+                        </div>
+                    </div>
+              </div>
+            </section>
+        
+         <!--       -------------------------        pronunciation Section          ------------------------------         -->
+        
+      <section class="mdl-layout__tab-panel is-active" id="fixed-tab-5">  
+           <div class="page-content mdl-grid">
+               
+               <div class="mdl-card__media">
+                <img src="logo.png" width="100%" />
+              </div>
+               
+    <!-- notice the data-mdc-auto-init attribute;  this value is used by the autoinit script -->
+    <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+      <input class="mdc-text-field__input" type="text" id="input">
+      <label for="input" class="mdc-floating-label">Input Label</label>
+      <div class="mdc-line-ripple"></div>
+    </div>
+
+    <button class="mdc-button mdc-button--raised" id="btnSay">
+      Say It
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    
+    
+    <script type="text/javascript">
+
+
+
+
+    // wait til the document is ready
+    $(document).ready(function () {
+
+
+      var synth = window.speechSynthesis;
+
+      $("#btnSay").on("click", function(e) {
+        
+        var textToSay = $("#input").val();
+        var utterThis = new SpeechSynthesisUtterance(textToSay);
+        synth.speak(utterThis);
+      
+      });
+
+
+
+      // initializes all elements with the data-mdc-auto-init attribute
+      window.mdc.autoInit();
+
+      // creating a var reference just to save code later
+      var drawer = $("aside")[0].MDCDrawer;
+
+
+      // when menu icon is click, toggle drawer open property
+      $(".mdc-top-app-bar__navigation-icon").on("click", function(){
+        drawer.open = !drawer.open;
+      });
+
+      // could/should/would add an event handler for the drawer items;  click should close the drawer
+
+
+    })
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+        .then(function(reg) {
+          // registration worked
+          console.log('Registration succeeded. Scope is ' + reg.scope);
+        }).catch(function(error) {
+          // registration failed
+          console.log('Registration failed with ' + error);
+        });
+      }
+    </script>
+    
+          </div>
+    </section>
+        
+<!------------------------------------------    END OF ABOUT ME      --------------------------------------------->
+        
+       
+        
+  </main>
+</div>
+    
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> <!--jquery added-->
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>    <!-- dexie included -->
+    <script src="locations.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+          // Let's register our serviceworker
+      navigator.serviceWorker.register('sw.js', {
+        // The scope cannot be parent to the script url
+        scope: './'
+      });
+    </script>
+    <script>
+    
+    // Define your database
+    //database saves the list input by the user page 3
+    var db = new Dexie("list_database");
+    db.version(1).stores({
+     list : '++id, item1, item2, item3, item4, item5, item6'
+    });
+    
+    
+    //on button press, save list, saves the items you've entered 
+    //if sucessfully added to DB then clear text field 
+      $("#myToDoList").on( "click", function() {
+         db.list.add({
+        	item1: $("#sample1").val(),
+        	item2: $("#sample2").val(),
+        	item3: $("#sample3").val(),
+        	item4: $("#sample4").val(),
+        	item5: $("#sample5").val(),
+        	item6: $("#sample5").val(),
+        	}).then(function(){
+        	   $("#sample1").val('')
+        	   $("#sample2").val('');
+        	   $("#sample3").val('');
+        	   $("#sample4").val('');
+        	   $("#sample5").val('');
+        	   $("#sample6").val('');
+        	});
+      });
+ 
+    </script>
+    
+    
+    <script>
+      $("#searchButton").on( "click", function() {
+        search = $("#searchBox").val();
+        searchInObj(search, locationData);
+      });
+      
+      var tempData= 0;    //hold temperature data for a particular place 
+      var contentString;  //holds data for click-able markers 
+      var citycode;       //citycode to concat to ajax call for average temp data 
+      var results = [];   //holds all results from 1980 locations 
+      var geocoder, map;   //for google maps initializations 
+      var i;
+      var years = {};      //years object contains year and sum of temperature average values 
+      var myDate;          
+      var myYear;
+      var search;
+      
+      google.charts.load('current', {'packages':['line', 'corechart']});
+      //google.charts.setOnLoadCallback(drawChart);
+      //initializations for google maps api 
+      function initMap (){
+        geocoder = new google.maps.Geocoder();
+        map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 2,
+          center: {lat:19.8781 , lng:7.6298 },
+          mapTypeId: 'terrain'
+      }); 
+      
+      //parses through my location data and creates option tag in dataset so user can see drop down menu
+      $.each(locationData, function(i, v){
+         $( "#cities" ).append('<option value="'+ v.name +'">'
+          +v.id + "</option>");
+      });
+        };
+      
+        function searchInObj(nameKey, myArray) {
+          var myCity = myArray.find(function(obj){
+            return obj.name == nameKey;
+          });
+          
+          
+          var url2 = "https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GSOM&locationid=" + myCity.id + "&startdate=2001-01-02&enddate=2010-01-02&datatypeid=TAVG&limit=850";
+          //ajax call to the dataset for the specified city 
+          $.ajax({
+            url: url2,
+            data: {},
+            headers: {
+              token: 'VokiKDjKShlWoaiDtyUEkFGwfqTPOLIz'
+            }
+          }).done(function(data) {
+            $.each(data.results, function(k, value) {
+              //get year 
+              //test object if year exists 
+              //update objects 
+              //else, create new object for that year 
+              myDate = new Date(value.date);    //this is the date 
+              myYear = myDate.getFullYear().toString();    //this is the year 
+              if(years[myYear]){
+                //if it is here we update 
+                years[myYear].sum += parseFloat(value.value);
+                years[myYear].count ++;
+                
+              }
+              else{
+                years[myYear] = {sum: parseFloat(value.value) , count: 1}
+              }
+            });
+            //async operations, need to call geocode from here so that object has items in it 
+            //this causes the tag to show up with a little delay but ensures data available 
+            codeAddress(search);
+          });
+        }
+      
+      //uses geocode to find location and place marker 
+      function codeAddress(address) {
+        geocoder.geocode({
+          'address': address
+        }, function(results, status) {
+          if (status === google.maps.GeocoderStatus.OK) {
+            $("#searchBox").val('');    //clears search box 
+            contentString = address + ": " + "<br>" +       //constructs content string for display 
+            "Yearly Temperature Averages: " + "<br>" ;
+            
+            $.each(years, function(k, value){             
+              contentString += k + ": " + ((value.sum)/(value.count)) + " C"  +"<br>";       //includes the averages for each year and appends them to content string 
+            });
+            
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });
+            
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: map,
+              position: results[0].geometry.location
+            });
+            
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+          }
+          else {
+            alert('Error occurred. TRY AGAIN.');
+          }
+        });
+      }
+    </script>
+   
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrtxgKmNRXjwHlBRqM91qyEWtHDaab23w=initMap"
+    type="text/javascript"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    
+   
+    
+    </body>
+</html>
